@@ -1,0 +1,117 @@
+<div class="padding-global">
+          <div class="container-large">
+            <div class="padding-section-large">
+              <div class="faq6_component">
+                <div class="w-layout-grid faq6_content">
+                  <div class="faq6_content-left">
+                    <div class="margin-bottom margin-small">
+                      <h2 class="heading-style-h2-3">FAQs</h2>
+                    </div>
+                    <p class="text-size-medium">
+{{ section.settings.text_faq_section_info }}
+</p>
+                    <div class="margin-top margin-medium">
+                      <div class="button-group">
+                        <a href="{{ section.settings.url_faq_button_link }}" class="button is-alternate w-button"> {{ section.settings.text_faq_button_text }} </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq6_list">
+                    <div class="w-layout-grid faq6_list-grid">
+                      {% for block in section.blocks %}
+    {% if block.type == "faq" %}
+                    <div li-block="FAQ" class="faq6_accordion">
+                                    
+                        
+                                    <div data-w-id="15895cc5-0feb-b323-ebdd-bd7b1db79945" class="faq6_question">
+                          <div class="text-size-medium">
+{{ block.settings.text_faq_title }}
+</div>
+                          <div class="faq6_icon-wrapper">
+                            <div class="icon-embed-small w-embed"><svg width="100%" height="100%" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor"></path>
+                              </svg></div>
+                          </div>
+                        </div>
+                                    
+                        
+                                    <div style="width:100%;height:0px" class="faq6_answer">
+                          <div class="margin-bottom margin-small">
+                            <div class="max-width-large">
+                              <p>
+{{ block.settings.text_faq_text }}
+</p>
+                            </div>
+                          </div>
+                        </div>
+                                    
+                      
+                            </div>
+            {% endif %}
+{% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "FAQ",
+    "class": "section_faq6 color-scheme-2",
+    "blocks": [
+        {
+            "name": "FAQ",
+            "type": "faq",
+            "settings": [
+                {
+                    "id": "text_faq_title",
+                    "type": "text",
+                    "label": "FAQ Title",
+                    "default": "What is your shipping policy?"
+                },
+                {
+                    "id": "text_faq_text",
+                    "type": "text",
+                    "label": "FAQ Text",
+                    "default": "We offer fast shipping on all orders. Standard shipping typically takes 5-7 business days. Expedited options are available at checkout."
+                }
+            ]
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_faq_section_info",
+            "type": "text",
+            "label": "FAQ Section Info",
+            "default": "Find answers to your questions about shipping, returns, and sizing right here."
+        },
+        {
+            "id": "url_faq_button_link",
+            "type": "url",
+            "label": "FAQ Button Link"
+        },
+        {
+            "id": "text_faq_button_text",
+            "type": "text",
+            "label": "FAQ Button Text",
+            "default": "Contact"
+        }
+    ],
+    "presets": [
+        {
+            "name": "FAQ",
+            "category": "Liquify",
+            "blocks": [
+                {
+                    "type": "faq"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "product"
+        ]
+    }
+} {% endschema %}

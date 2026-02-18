@@ -1,0 +1,83 @@
+<div class="padding-global">
+          <div class="container-large">
+            <div class="header5_content">
+              <div class="padding-section-large">
+                <div class="max-width-medium">
+                  <div class="margin-bottom margin-small">
+                    <h1>
+{{ section.settings.text_heading }}
+</h1>
+                  </div>
+                  <p class="text-size-medium-3">
+{{ section.settings.text_paragraph }}
+</p>
+                  <div class="margin-top margin-medium">
+                    <div class="button-group">
+                      <a href="{{ section.settings.url_cta_button_1_link }}" class="button is-alternate w-button"> {{ section.settings.text_cta_button_1_text }} </a>
+                      <a href="{{ section.settings.url_cta_button_2_text }}" class="button w-button"> {{ section.settings.text_cta_button_2_text }} </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header5_background-image-wrapper">
+          <div class="image-overlay-layer"></div>{% if section.settings.image_image %}
+{{ section.settings.image_image | image_url: width: 2000 | image_tag: class: 'header5_background-image', sizes: '(max-width: 1920px) 100vw, 1920px', loading: 'eager' }}
+{% else %}
+<img class="header5_background-image" src="{{ 'Site-Hero_1Site-Hero.avif' | asset_url }}" alt="" sizes="(max-width: 1920px) 100vw, 1920px" loading="eager" srcset="{{ 'Site-Hero_1Site-Hero.avif' | asset_url }} 500w, {{ 'Site-Hero_1Site-Hero.avif' | asset_url }} 800w, {{ 'Site-Hero_1Site-Hero.avif' | asset_url }} 1080w, {{ 'Site-Hero_1Site-Hero.avif' | asset_url }} 1920w">
+{% endif %}
+        </div> {% schema %} {
+    "tag": "header",
+    "name": "Hero Section 1",
+    "class": "section_hero1 text-color-white",
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Stay Awake,<br\/>Never Woke"
+        },
+        {
+            "id": "text_paragraph",
+            "type": "text",
+            "label": "Paragraph",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+        },
+        {
+            "id": "url_cta_button_1_link",
+            "type": "url",
+            "label": "CTA Button 1 Link"
+        },
+        {
+            "id": "text_cta_button_1_text",
+            "type": "text",
+            "label": "CTA Button 1 Text",
+            "default": "Shop Men"
+        },
+        {
+            "id": "url_cta_button_2_text",
+            "type": "url",
+            "label": "CTA Button 2 Text"
+        },
+        {
+            "id": "text_cta_button_2_text",
+            "type": "text",
+            "label": "CTA Button 2 Text",
+            "default": "Shop Women"
+        },
+        {
+            "id": "image_image",
+            "type": "image_picker",
+            "label": "Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Hero Section 1",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

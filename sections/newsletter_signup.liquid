@@ -1,0 +1,83 @@
+<div class="padding-global">
+          <div class="container-large">
+            <div class="padding-section-large">
+              <div class="cta4_component">
+                <div class="newsletter_signup">
+                  <div class="max-width-medium">
+                    <div class="margin-bottom margin-small">
+                      <h2 class="heading-style-h2-2">
+{{ section.settings.text_heading }}
+</h2>
+                    </div>
+                    <p class="text-size-medium-4">
+{{ section.settings.text_paragraph }}
+</p>
+                    <div class="margin-top margin-medium">
+                      <div class="cta4_form-block w-form">
+                        {% form 'customer', return_to: '/', class: 'cta4_form' %}
+<div class="signup-form-wrapper"><input class="form_input is-alternate w-input" maxlength="256" name="contact[email]" data-name="Email 2" placeholder="{{ section.settings.placeholder_text }}" type="email" id="email-2" required=""><input type="submit" data-wait="Please wait..." class="button is-alternate w-button" value="Sign up"></div>
+                          <div li-object="form.errors | default_errors" class="text-size-tiny text-color-red">{{ form.errors | default_errors }}</div>
+                          <div class="hide w-embed"><input type="hidden" name="contact[accepts_marketing]" value="true"></div>
+                          <div class="text-size-tiny">By clicking Sign Up you're confirming that you agree with our <a href="{{ section.settings.url_terms_and_conditions_link }}" class="text-link text-color-white"> Terms and Conditions </a>
+                          </div>
+                        {% endform %}
+                        <div class="form_message-success-wrapper w-form-done">
+                          <div class="form_message-success-2">
+                            <div class="success-text">Thank you! Your submission has been received!</div>
+                          </div>
+                        </div>
+                        <div class="form_message-error-wrapper w-form-fail">
+                          <div class="form_message-error-2">
+                            <div class="error-text">Oops! Something went wrong while submitting the form.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cta4_background-image-wrapper">
+          <div class="image-overlay-layer-2 hide"></div>{% if section.settings.image_background_image %}
+{{ section.settings.image_background_image | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'cta4_background-image' }}
+{% else %}
+<img loading="lazy" alt="" src="https://cdn.prod.website-files.com/68b74e7fc595a93d5c97f6b1/68b74e81c595a93d5c97f72e_placeholder-image.svg" class="cta4_background-image">
+{% endif %}
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Newsletter Signup",
+    "class": "section_cta4 text-color-white",
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Join the Movement"
+        },
+        {
+            "id": "text_paragraph",
+            "type": "text",
+            "label": "Paragraph",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        },
+        {
+            "id": "url_terms_and_conditions_link",
+            "type": "url",
+            "label": "Terms and Conditions Link"
+        },
+        {
+            "id": "image_background_image",
+            "type": "image_picker",
+            "label": "Background Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Newsletter Signup",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

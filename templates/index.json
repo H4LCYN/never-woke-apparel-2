@@ -1,0 +1,28 @@
+{
+    "sections": {
+        "hero_section_1": {
+            "type": "hero_section_1"
+        },
+        "new_products": {
+            "type": "new_products"
+        },
+        "featured_collections": {
+            "type": "featured_collections"
+        },
+        "video_feature": {
+            "type": "video_feature"
+        },
+        "newsletter_signup": {
+            "type": "newsletter_signup"
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "hero_section_1",
+        "new_products",
+        "featured_collections",
+        "video_feature",
+        "newsletter_signup"
+    ]
+}
