@@ -1,0 +1,58 @@
+{
+    "sections": {
+        "preorder_product_sec": {
+            "type": "preorder_product_sec",
+            "blocks": {
+                "breadcrumbs-preorder": {
+                    "type": "breadcrumbs-preorder",
+                    "name": "breadcrumbs-preorder"
+                },
+                "product-name": {
+                    "type": "product-name",
+                    "name": "Product Name"
+                },
+                "product-price": {
+                    "type": "product-price",
+                    "name": "Product Price"
+                },
+                "description": {
+                    "type": "description",
+                    "name": "Description"
+                },
+                "preorder-add-to-cart": {
+                    "type": "preorder-add-to-cart",
+                    "name": "Preorder Add to Cart"
+                }
+            },
+            "block_order": [
+                "breadcrumbs-preorder",
+                "product-name",
+                "product-price",
+                "description",
+                "preorder-add-to-cart"
+            ]
+        },
+        "recommended_products": {
+            "type": "recommended_products"
+        },
+        "faq": {
+            "type": "faq",
+            "blocks": {
+                "faq": {
+                    "name": "FAQ",
+                    "type": "faq"
+                }
+            },
+            "block_order": [
+                "faq"
+            ]
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "preorder_product_sec",
+        "recommended_products",
+        "faq"
+    ]
+}

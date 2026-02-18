@@ -1,0 +1,73 @@
+<div class="padding-global padding-section-medium is-no-top">
+          <div class="container-large">
+            {% paginate collection.products by 50 %}
+    <div li-paginate:by="50" li-paginate="collection.products" class="filter_layout" by="50">
+              <div id="w-node-cc1e0298-8b59-2f43-3a59-954fe1190906-2f73a9fc" class="filter_feed">
+                <div class="filter_feed-header"><select id="sort-by" li-for:inside="option in collection.sort_options" class="sort_select filter_checkbox">
+        {% for option in collection.sort_options %}                            
+                    
+                            <option value="{{ option.value }}" {% if option.value == collection.sort_by %}selected{% elsif option.value == collection.default_sort_by %}selected{% endif %}>{{ option.name }}</option>
+                            
+                  
+                    {% endfor %}    </select></div>
+                <div class="filter_product-list-wrapper w-dyn-list">
+                  <div role="list" class="filter_product-list w-dyn-items">
+                    {% for product in collection.products %}    <div li-for="product in collection.products" role="listitem" class="filter_product-list-item w-dyn-item">
+                                    
+                      
+                            {% render 'product_item', product: product %}
+                            
+                    
+                        </div>
+{% endfor %}
+                  </div>
+                  {% if collection.products == blank %}    <div li-if="collection.products == blank" class="filter_empty w-dyn-empty">
+    
+                    <div class="heading-style-h6">No results found.</div>
+                    <div class="spacer-xxsmall"></div>
+                    <div>There are no results with this criteria. Try changing your search.</div>
+                      </div>
+{% endif %}
+                </div>
+              </div>
+            </div>{% endpaginate %}
+          </div>
+        </div>
+        <div class="hide w-embed w-script">
+          <script>
+//sortierung
+  Shopify.queryParams = {};
+  // Preserve existing query parameters
+  if (location.search.length) {
+    var params = location.search.substr(1).split('&');
+    for (var i = 0; i < params.length; i++) {
+      var keyValue = params[i].split('=');
+      if (keyValue.length) {
+        Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
+      }
+    }
+  }
+  // Update sort_by query parameter on select change
+  document.querySelector('#sort-by').addEventListener('change', function(e) {
+    var value = e.target.value;
+    Shopify.queryParams.sort_by = value;
+    location.search = new URLSearchParams(Shopify.queryParams).toString();
+  });
+</script>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Collection Products",
+    "class": "section_filter color-scheme-2",
+    "presets": [
+        {
+            "name": "Collection Products",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "collection"
+        ]
+    }
+} {% endschema %}

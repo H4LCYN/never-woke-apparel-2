@@ -1,0 +1,149 @@
+<div class="padding-global">
+          <div class="container-large">
+            <div class="padding-section-small">
+              <div class="featured-products_component">
+                <div class="margin-bottom margin-medium">
+                  <div class="featured-products_header">
+                    <h2 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h2>
+                  </div>
+                </div>
+                <div class="margin-bottom margin-small">
+                  <div class="divider-horizontal"></div>
+                </div>
+                <div class="blog52_list-wrapper">
+                  <div class="w-layout-grid blog52_list">
+                    <div class="blog52_item">{% assign product = all_products[section.settings.product_featured_product_1] %} 
+                      <a li-object:href="product.url" href="{{ product.url }}" class="blog52_item-link w-inline-block">
+                        <div class="margin-bottom margin-small">
+                          <div class="blog52_image-wrapper">{% if section.settings.image_featured_product_image_1 %}
+{{ section.settings.image_featured_product_image_1 | image_url: width: 1000 | image_tag: class: 'blog52_image', sizes: '(max-width: 1200px) 100vw, 1200px', loading: 'lazy' }}
+{% else %}
+<img class="blog52_image" src="{{ 'male_t-shirt_make-us_1male_t-shirt_make-us.avif' | asset_url }}" alt="" sizes="(max-width: 1200px) 100vw, 1200px" loading="lazy" srcset="{{ 'male_t-shirt_make-us_1male_t-shirt_make-us.avif' | asset_url }} 500w, {{ 'male_t-shirt_make-us_1male_t-shirt_make-us.avif' | asset_url }} 800w, {{ 'male_t-shirt_make-us_1male_t-shirt_make-us.avif' | asset_url }} 1200w">
+{% endif %}
+                            <div class="product-item_tag_list">
+                              {% if product.selected_or_first_available_variant.available != true %}    <div li-if="product.selected_or_first_available_variant.available != true" class="product-item_tag">
+    Not in Stock    </div>
+{% endif %}
+                              {% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price" class="product-item_tag is-red">
+    Sale    </div>
+{% endif %}
+                            </div>
+                          </div>
+                        </div>
+                        <div class="margin-bottom margin-xxsmall">
+                          <h3 li-object="product.title" class="heading-style-h5">{{ product.title }}</h3>
+                        </div>
+                        <div class="product-item_price">
+                          {% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price">
+    
+                            <div li-object="product.compare_at_price | money" class="text-size-regular text-style-strikethrough text-style-muted">{{ product.compare_at_price | money }}</div>
+                              </div>
+{% endif %}
+                          <div li-object="product.price | money" class="text-size-regular">{{ product.price | money }}</div>
+                        </div>
+                        <div class="margin-top margin-small">
+                          <div class="divider-horizontal"></div>
+                        </div>
+                        <div class="margin-top margin-small">
+                          <div class="button-group">
+                            <div class="button is-alternate">
+                              <div>Shop Now</div>
+                              <div class="icon-embed-xxsmall hide w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+                                </svg></div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="blog52_item">{% assign product = all_products[section.settings.product_featured_product_2] %} 
+                      <a li-object:href="product.url" href="{{ product.url }}" class="blog52_item-link w-inline-block">
+                        <div class="margin-bottom margin-small">
+                          <div class="blog52_image-wrapper">{% if section.settings.image_featured_product_image_2 %}
+{{ section.settings.image_featured_product_image_2 | image_url: width: 1000 | image_tag: class: 'blog52_image', sizes: '(max-width: 1847px) 100vw, 1847px', loading: 'lazy' }}
+{% else %}
+<img class="blog52_image" src="{{ 'female_hat_never-woke_1female_hat_never-woke.avif' | asset_url }}" alt="" sizes="(max-width: 1847px) 100vw, 1847px" loading="lazy" srcset="{{ 'female_hat_never-woke_1female_hat_never-woke.avif' | asset_url }} 500w, {{ 'female_hat_never-woke_1female_hat_never-woke.avif' | asset_url }} 800w, {{ 'female_hat_never-woke_1female_hat_never-woke.avif' | asset_url }} 1080w, {{ 'female_hat_never-woke_1female_hat_never-woke.avif' | asset_url }} 1847w">
+{% endif %}
+                            <div class="product-item_tag_list">
+                              {% if product.selected_or_first_available_variant.available != true %}    <div li-if="product.selected_or_first_available_variant.available != true" class="product-item_tag">
+    Not in Stock    </div>
+{% endif %}
+                              {% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price" class="product-item_tag is-red">
+    Sale    </div>
+{% endif %}
+                            </div>
+                          </div>
+                        </div>
+                        <div class="margin-bottom margin-xxsmall">
+                          <h3 li-object="product.title" class="heading-style-h5">{{ product.title }}</h3>
+                        </div>
+                        <div class="product-item_price">
+                          {% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price">
+    
+                            <div li-object="product.compare_at_price | money" class="text-size-regular text-style-strikethrough text-style-muted">{{ product.compare_at_price | money }}</div>
+                              </div>
+{% endif %}
+                          <div li-object="product.price | money" class="text-size-regular">{{ product.price | money }}</div>
+                        </div>
+                        <div class="margin-top margin-small">
+                          <div class="divider-horizontal"></div>
+                        </div>
+                        <div class="margin-top margin-small">
+                          <div class="button-group">
+                            <div class="button is-alternate">
+                              <div>Shop Now</div>
+                              <div class="icon-embed-xxsmall hide w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+                                </svg></div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "New products",
+    "class": "section_featured-products color-scheme-2",
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Featured Products"
+        },
+        {
+            "id": "product_featured_product_1",
+            "type": "product",
+            "label": "Featured Product 1"
+        },
+        {
+            "id": "image_featured_product_image_1",
+            "type": "image_picker",
+            "label": "Featured Product Image 1"
+        },
+        {
+            "id": "product_featured_product_2",
+            "type": "product",
+            "label": "Featured Product 2"
+        },
+        {
+            "id": "image_featured_product_image_2",
+            "type": "image_picker",
+            "label": "Featured Product Image 2"
+        }
+    ],
+    "presets": [
+        {
+            "name": "New products",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
