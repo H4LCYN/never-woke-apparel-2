@@ -24,9 +24,9 @@
         </div>
         <div class="header5_background-image-wrapper">
           <div class="image-overlay-layer"></div>{% if section.settings.image_image %}
-{{ section.settings.image_image | image_url: width: 2000 | image_tag: class: 'header5_background-image', sizes: '(max-width: 1920px) 100vw, 1920px', loading: 'eager' }}
+{{ section.settings.image_image | image_url: width: 2000 | image_tag: loading: 'eager', class: 'header5_background-image' }}
 {% else %}
-<img class="header5_background-image" src="{{ 'Site-Hero_1Site-Hero.avif' | asset_url }}" alt="" sizes="(max-width: 1920px) 100vw, 1920px" loading="eager" srcset="{{ 'Site-Hero_1Site-Hero.avif' | asset_url }} 500w, {{ 'Site-Hero_1Site-Hero.avif' | asset_url }} 800w, {{ 'Site-Hero_1Site-Hero.avif' | asset_url }} 1080w, {{ 'Site-Hero_1Site-Hero.avif' | asset_url }} 1920w">
+<img loading="eager" alt="" src="{{ 'Site-Hero_1Site-Hero.avif' | asset_url }}" class="header5_background-image">
 {% endif %}
         </div> {% schema %} {
     "tag": "header",
