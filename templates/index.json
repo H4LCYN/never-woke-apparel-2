@@ -1,28 +1,69 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "hero_section_1": {
-            "type": "hero_section_1"
-        },
-        "new_products": {
-            "type": "new_products"
-        },
-        "featured_collections": {
-            "type": "featured_collections"
-        },
-        "video_feature": {
-            "type": "video_feature"
-        },
-        "newsletter_signup": {
-            "type": "newsletter_signup"
-        }
+  "sections": {
+    "hero_section_1": {
+      "type": "hero_section_1",
+      "settings": {
+        "text_heading": "Stay Awake,<br>Never Woke",
+        "text_paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+        "url_cta_button_1_link": "",
+        "text_cta_button_1_text": "Shop Men",
+        "url_cta_button_2_text": "",
+        "text_cta_button_2_text": "Shop Women"
+      }
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "hero_section_1",
-        "new_products",
-        "featured_collections",
-        "video_feature",
-        "newsletter_signup"
-    ]
+    "new_products": {
+      "type": "new_products",
+      "settings": {
+        "text_heading": "Featured Products",
+        "product_featured_product_1": "",
+        "product_featured_product_2": ""
+      }
+    },
+    "featured_collections_BVkzHN": {
+      "type": "featured_collections",
+      "name": "Featured Collections",
+      "settings": {
+        "text_collection_1_heading": "Collection 1",
+        "text_collection_1_button_text": "Shop",
+        "url_collection_1_button_link": "",
+        "text_collection_2_heading": "Shirts",
+        "text_collection_3_heading": "Collection 3",
+        "text_collection_3_button_text": "Shop",
+        "url_collection_3_button_link": "",
+        "text_collection_4_heading": "Collection 4",
+        "text_collection_4_button_text": "Shop",
+        "url_collection_4_button_link": ""
+      }
+    },
+    "video_feature": {
+      "type": "video_feature",
+      "settings": {}
+    },
+    "newsletter_signup": {
+      "type": "newsletter_signup",
+      "settings": {
+        "text_heading": "Join the Movement",
+        "text_paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "url_terms_and_conditions_link": ""
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "hero_section_1",
+    "new_products",
+    "featured_collections_BVkzHN",
+    "video_feature",
+    "newsletter_signup"
+  ]
 }
