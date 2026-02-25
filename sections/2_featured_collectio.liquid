@@ -1,0 +1,105 @@
+<div class="featured-collections-2_component">
+          <div class="w-layout-grid featured-collections-2_grid-list">
+            <div id="w-node-b6f95c8b-4d4d-5f11-0029-9a837787323e-2f73a9f0" class="w-layout-grid featured-collections-2_row">
+              <div id="w-node-b6f95c8b-4d4d-5f11-0029-9a837787323f-2f73a9f0" class="featured-collections-2_card text-color-white">
+                <div class="featured-collections-2_background-image-wrapper">
+                  <div class="image-overlay-layer"></div>{% if section.settings.image_collection_1_image %}
+{{ section.settings.image_collection_1_image | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'featured-collections-2_background-image' }}
+{% else %}
+<img loading="lazy" alt="" src="{{ 'Graham-Truck_1Graham-Truck.avif' | asset_url }}" class="featured-collections-2_background-image">
+{% endif %}
+                </div>
+                <div class="featured-collections-2_card-content">
+                  <div class="featured-collections-2_card-content-top">
+                    <div class="margin-bottom margin-small">
+                      <h3 class="heading-style-h3">
+{{ section.settings.text_collection_1_heading }}
+</h3>
+                    </div>
+                  </div>
+                  <div class="button-group">
+                    <a href="{{ section.settings.url_collection_1_button_link }}" class="button is-secondary is-alternate w-button"> {{ section.settings.text_collection_1_button_text }} </a>
+                  </div>
+                </div>
+              </div>
+              <div id="w-node-b6f95c8b-4d4d-5f11-0029-9a837787324b-2f73a9f0" class="featured-collections-2_card text-color-white">
+                <div class="featured-collections-2_background-image-wrapper">
+                  <div class="image-overlay-layer"></div>{% if section.settings.image_collection_2_image %}
+{{ section.settings.image_collection_2_image | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'featured-collections-2_background-image' }}
+{% else %}
+<img loading="lazy" alt="" src="{{ 'women-truck_1women-truck.avif' | asset_url }}" class="featured-collections-2_background-image">
+{% endif %}
+                </div>
+                <div class="featured-collections-2_card-content">
+                  <div class="featured-collections-2_card-content-top">
+                    <div class="margin-bottom margin-small">
+                      <h3 class="heading-style-h3">
+{{ section.settings.text_collection_2_heading }}
+</h3>
+                    </div>
+                  </div>
+                  <div class="button-group">
+                    <a href="{{ section.settings.url_collection_2_button_link }}" class="button is-secondary is-alternate w-button"> {{ section.settings.text_collection_2_button_text }} </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "2 Featured Collectio",
+    "class": "section_featured-collections-3 color-scheme-2",
+    "settings": [
+        {
+            "id": "image_collection_1_image",
+            "type": "image_picker",
+            "label": "Collection 1 Image"
+        },
+        {
+            "id": "text_collection_1_heading",
+            "type": "text",
+            "label": "Collection 1 Heading",
+            "default": "Collection 1"
+        },
+        {
+            "id": "text_collection_1_button_text",
+            "type": "text",
+            "label": "Collection 1 Button Text",
+            "default": "Shop"
+        },
+        {
+            "id": "url_collection_1_button_link",
+            "type": "url",
+            "label": "Collection 1 Button Link"
+        },
+        {
+            "id": "image_collection_2_image",
+            "type": "image_picker",
+            "label": "Collection 2 Image"
+        },
+        {
+            "id": "text_collection_2_heading",
+            "type": "text",
+            "label": "Collection 2 Heading",
+            "default": "Collection 2"
+        },
+        {
+            "id": "url_collection_2_button_link",
+            "type": "url",
+            "label": "Collection 2 Button Link"
+        },
+        {
+            "id": "text_collection_2_button_text",
+            "type": "text",
+            "label": "Collection 2 Button Text",
+            "default": "Shop"
+        }
+    ],
+    "presets": [
+        {
+            "name": "2 Featured Collectio",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

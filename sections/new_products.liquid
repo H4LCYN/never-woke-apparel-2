@@ -18,9 +18,9 @@
                       <a li-object:href="product.url" href="{{ product.url }}" class="blog52_item-link w-inline-block">
                         <div class="margin-bottom margin-small">
                           <div class="blog52_image-wrapper">{% if section.settings.image_featured_product_image_1 %}
-{{ section.settings.image_featured_product_image_1 | image_url: width: 1000 | image_tag: class: 'blog52_image', sizes: '(max-width: 1200px) 100vw, 1200px', loading: 'lazy' }}
+{{ section.settings.image_featured_product_image_1 | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'blog52_image' }}
 {% else %}
-<img class="blog52_image" src="{{ 'male_t-shirt_make-us_1male_t-shirt_make-us.avif' | asset_url }}" alt="" sizes="(max-width: 1200px) 100vw, 1200px" loading="lazy" srcset="{{ 'male_t-shirt_make-us_1male_t-shirt_make-us.avif' | asset_url }} 500w, {{ 'male_t-shirt_make-us_1male_t-shirt_make-us.avif' | asset_url }} 800w, {{ 'male_t-shirt_make-us_1male_t-shirt_make-us.avif' | asset_url }} 1200w">
+<img loading="lazy" alt="" src="{{ 'male_t-shirt_make-us_1male_t-shirt_make-us.avif' | asset_url }}" class="blog52_image">
 {% endif %}
                             <div class="product-item_tag_list">
                               {% if product.selected_or_first_available_variant.available != true %}    <div li-if="product.selected_or_first_available_variant.available != true" class="product-item_tag">
@@ -62,9 +62,9 @@
                       <a li-object:href="product.url" href="{{ product.url }}" class="blog52_item-link w-inline-block">
                         <div class="margin-bottom margin-small">
                           <div class="blog52_image-wrapper">{% if section.settings.image_featured_product_image_2 %}
-{{ section.settings.image_featured_product_image_2 | image_url: width: 1000 | image_tag: class: 'blog52_image', sizes: '(max-width: 1847px) 100vw, 1847px', loading: 'lazy' }}
+{{ section.settings.image_featured_product_image_2 | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'blog52_image' }}
 {% else %}
-<img class="blog52_image" src="{{ 'female_hat_never-woke_1female_hat_never-woke.avif' | asset_url }}" alt="" sizes="(max-width: 1847px) 100vw, 1847px" loading="lazy" srcset="{{ 'female_hat_never-woke_1female_hat_never-woke.avif' | asset_url }} 500w, {{ 'female_hat_never-woke_1female_hat_never-woke.avif' | asset_url }} 800w, {{ 'female_hat_never-woke_1female_hat_never-woke.avif' | asset_url }} 1080w, {{ 'female_hat_never-woke_1female_hat_never-woke.avif' | asset_url }} 1847w">
+<img alt="" src="{{ 'female_hat_never-woke_1female_hat_never-woke.avif' | asset_url }}" loading="lazy" class="blog52_image">
 {% endif %}
                             <div class="product-item_tag_list">
                               {% if product.selected_or_first_available_variant.available != true %}    <div li-if="product.selected_or_first_available_variant.available != true" class="product-item_tag">
