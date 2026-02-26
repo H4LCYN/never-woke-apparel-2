@@ -2,7 +2,7 @@
           <div class="navbar_component">
             <div class="navbar_blur"></div>
             <div class="navbar_container">
-              <a href="{{ section.settings.url_link }}" li-object:href="routes.root_url" class="navbar23_logo-link w-nav-brand"> {% if section.settings.image_logo %} {{ section.settings.image_logo | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'navbar23_logo' }} {% else %} <img loading="lazy" alt="" src="{{ 'relume-298182.png' | asset_url }}" class="navbar23_logo"> {% endif %} </a>
+              <a href="{{ section.settings.href_routesroot_url }}" li-object:href="routes.root_url" class="navbar23_logo-link w-nav-brand"> {% if section.settings.image_logo %} {{ section.settings.image_logo | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'navbar23_logo' }} {% else %} <img loading="lazy" alt="" src="{{ 'relume-298182.png' | asset_url }}" class="navbar23_logo"> {% endif %} </a>
               <nav role="navigation" class="navbar23_menu w-nav-menu">
                 <div class="navbar23_menu-left">
                   {% for link in linklists[section.settings.menu].links %}    <div data-delay="300" data-hover="true" li-for="link in linklists[section.settings.menu].links" class="navbar23_menu-dropdown w-dropdown">
@@ -614,6 +614,11 @@
             "id": "menu",
             "label": "Menu",
             "default": "main-menu"
+        },
+        {
+            "id": "href_routesroot_url",
+            "type": "text",
+            "label": "routes.root_url"
         },
         {
             "id": "url_link",
